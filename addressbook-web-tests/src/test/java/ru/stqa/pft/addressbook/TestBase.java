@@ -34,8 +34,12 @@ public class TestBase {
     wd.findElement(By.linkText("Logout")).click();
   }
 
+  protected void goToGroupPage() {
+    wd.findElement(By.linkText("groups")).click();
+  }
+
   protected void returnToGroupPage() {
-    wd.findElement(By.linkText("group page")).click();
+    wd.findElement(By.linkText("groups")).click();
   }
 
   protected void submitNewGroupCreation() {
