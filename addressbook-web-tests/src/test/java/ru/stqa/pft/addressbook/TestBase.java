@@ -38,8 +38,8 @@ public class TestBase {
     wd.findElement(By.linkText("groups")).click();
   }
 
-  protected void returnToGroupPage() {
-    wd.findElement(By.linkText("groups")).click();
+  protected void returnToHomePage() {
+    wd.findElement(By.linkText("home")).click();
   }
 
   protected void submitNewGroupCreation() {

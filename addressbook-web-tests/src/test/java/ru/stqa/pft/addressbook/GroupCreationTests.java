@@ -10,7 +10,7 @@ public class GroupCreationTests extends TestBase {
     initGroupCreation();
     fillGroupForm(new GroupData("test1", "test2", "test3"));
     submitNewGroupCreation();
-    returnToGroupPage();
+    returnToHomePage();
     logOut();
   }
 

@@ -42,7 +42,7 @@ public class ContactCreationTests {
   }
 
   private void returnToHomePage() {
-    wd.findElement(By.linkText("home page")).click();
+    wd.findElement(By.linkText("home")).click();
   }
 
   private void submitContactCreation() {
