@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
   WebDriver wd;
 
+  private NavigationHelper navigationHelper;
   private GroupHelper groupHelper;
 
   public void init() {
@@ -19,6 +20,7 @@ public class ApplicationManager {
     wd.get("http://localhost/addressbook/group.php");
     login("admin", "secret");
     groupHelper = new GroupHelper(wd);
+    navigationHelper = new NavigationHelper(wd);
   }
 
   private void login(String username, String password) {
@@ -32,10 +34,6 @@ public class ApplicationManager {
 
   public void logOut() {
     wd.findElement(By.linkText("Logout")).click();
-  }
-
-  public void goToGroupPage() {
-    wd.findElement(By.linkText("groups")).click();
   }
 
   public void stop() {
@@ -62,5 +60,9 @@ public class ApplicationManager {
 
   public GroupHelper getGroupHelper() {
     return groupHelper;
+  }
+
+  public NavigationHelper getNavigationHelper() {
+    return navigationHelper;
   }
 }
