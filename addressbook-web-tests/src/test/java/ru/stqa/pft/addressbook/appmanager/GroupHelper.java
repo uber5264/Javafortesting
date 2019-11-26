@@ -20,6 +20,8 @@ public class GroupHelper {
   }
 
   public void fillGroupForm(GroupData groupData) {
+    wd.findElement(By.name("group_name")).click();
+    wd.findElement(By.name("group_name")).clear();
     wd.findElement(By.name("group_name")).sendKeys(groupData.getName());
     wd.findElement(By.name("group_header")).click();
     wd.findElement(By.name("group_header")).clear();
