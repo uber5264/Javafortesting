@@ -11,31 +11,28 @@ public class GroupHelper extends HelperBase {
   }
 
   public void returnToHomePage() {
-    wd.findElement(By.linkText("home")).click();
+        click(By.linkText("home"));
   }
 
   public void submitNewGroupCreation() {
-
-    click("submit");
+    click(By.name("submit"));
   }
 
   public void fillGroupForm(GroupData groupData) {
-    type("group_name", groupData.getName());
-    type("group_header", groupData.getHeader());
-    type("group_footer", groupData.getFooter());
+    type(By.name("group_name"), groupData.getName());
+    type(By.name("group_header"), groupData.getHeader());
+    type(By.name("group_footer"), groupData.getFooter());
   }
 
   public void initGroupCreation() {
-    click("new");
-    click("group_name");
-    wd.findElement(By.name("group_name")).clear();
+    click(By.name("new"));
   }
 
   public void deleteSelectedGroup() {
-    click("delete");
+      click(By.name("delete"));
   }
 
   public void selectGroup() {
-    click("selected[]");
+      click(By.name("selected[]"));
   }
 }
