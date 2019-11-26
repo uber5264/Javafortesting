@@ -1,14 +1,21 @@
-package ru.stqa.pft.addressbook;
+package ru.stqa.pft.addressbook.tests;
 
-import java.util.concurrent.TimeUnit;
-import org.testng.annotations.*;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import ru.stqa.pft.addressbook.model.ContactData;
 
-public class ContactCreationTests {
+import java.util.concurrent.TimeUnit;
+
+public class TestBase2 {
+
+
   private WebDriver wd;
-
 
   @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
@@ -27,29 +34,19 @@ public class ContactCreationTests {
     wd.findElement(By.xpath("//input[@value='Login']")).click();
   }
 
-
-  @Test
-  public void testContactCreation() throws Exception {
-    initContactCreation();
-    fillContactForm(new ContactData("Johnson", "Johnson", "JJojnson", "Mr.", "Super big company", "Russia, St Petersburgh", "123-45-67", "john.johnson@rambler.ru", "www.homepage.ru", "1985", "February", "2", "2", "February", "2015", "John"));
-    submitContactCreation();
-    returnToHomePage();
-    logOut();
-  }
-
-  private void logOut() {
+  protected void logOut() {
     wd.findElement(By.linkText("Logout")).click();
   }
 
-  private void returnToHomePage() {
+  protected void returnToHomePage() {
     wd.findElement(By.linkText("home")).click();
   }
 
-  private void submitContactCreation() {
+  protected void submitContactCreation() {
     wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
   }
 
-  private void fillContactForm(ContactData contactData) {
+  protected void fillContactForm(ContactData contactData) {
     wd.findElement(By.name("firstname")).click();
     wd.findElement(By.name("firstname")).clear();
     wd.findElement(By.name("firstname")).sendKeys(contactData.getFirstName());
@@ -103,7 +100,7 @@ public class ContactCreationTests {
     wd.findElement(By.name("theform")).click();
   }
 
-  private void initContactCreation() {
+  protected void initContactCreation() {
     wd.findElement(By.linkText("add new")).click();
   }
 
@@ -129,5 +126,4 @@ public class ContactCreationTests {
       return false;
     }
   }
-
 }
