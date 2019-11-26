@@ -6,19 +6,15 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import ru.stqa.pft.addressbook.model.ContactData;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestBase2 {
-
+public class ApplManager2 {
 
   private WebDriver wd;
 
-  @BeforeMethod(alwaysRun = true)
-  public void setUp() throws Exception {
+  protected void init() {
     wd = new FirefoxDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/group.php");
@@ -34,19 +30,19 @@ public class TestBase2 {
     wd.findElement(By.xpath("//input[@value='Login']")).click();
   }
 
-  protected void logOut() {
+  public void logOut() {
     wd.findElement(By.linkText("Logout")).click();
   }
 
-  protected void returnToHomePage() {
+  public void returnToHomePage() {
     wd.findElement(By.linkText("home")).click();
   }
 
-  protected void submitContactCreation() {
+  public void submitContactCreation() {
     wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
   }
 
-  protected void fillContactForm(ContactData contactData) {
+  public void fillContactForm(ContactData contactData) {
     wd.findElement(By.name("firstname")).click();
     wd.findElement(By.name("firstname")).clear();
     wd.findElement(By.name("firstname")).sendKeys(contactData.getFirstName());
@@ -100,12 +96,11 @@ public class TestBase2 {
     wd.findElement(By.name("theform")).click();
   }
 
-  protected void initContactCreation() {
+  public void initContactCreation() {
     wd.findElement(By.linkText("add new")).click();
   }
 
-  @AfterMethod(alwaysRun = true)
-  public void tearDown() throws Exception {
+  protected void stop() {
     wd.quit();
   }
 

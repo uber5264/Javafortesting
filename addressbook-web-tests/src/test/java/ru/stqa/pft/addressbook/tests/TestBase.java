@@ -7,15 +7,16 @@ import ru.stqa.pft.addressbook.appmanager.ApplicationManager;
 public class TestBase {
 
   protected final ApplicationManager app = new ApplicationManager();
+  protected final ApplManager2 app2 = new ApplManager2();
 
   @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
-    app.init();
+    app2.init();
   }
 
   @AfterMethod(alwaysRun = true)
   public void tearDown() throws Exception {
-    app.stop();
+    app2.stop();
   }
 
 }
