@@ -16,7 +16,12 @@ public class GroupHelper {
   }
 
   public void submitNewGroupCreation() {
-    wd.findElement(By.name("submit")).click();
+
+    click("submit");
+  }
+
+  private void click(String locator) {
+    wd.findElement(By.name(locator)).click();
   }
 
   public void fillGroupForm(GroupData groupData) {
@@ -26,22 +31,22 @@ public class GroupHelper {
   }
 
   private void type(String locator, String text) {
-    wd.findElement(By.name(locator)).click();
+    click(locator);
     wd.findElement(By.name(locator)).clear();
     wd.findElement(By.name(locator)).sendKeys(text);
   }
 
   public void initGroupCreation() {
-    wd.findElement(By.name("new")).click();
-    wd.findElement(By.name("group_name")).click();
+    click("new");
+    click("group_name");
     wd.findElement(By.name("group_name")).clear();
   }
 
   public void deleteSelectedGroup() {
-    wd.findElement(By.name("delete")).click();
+    click("delete");
   }
 
   public void selectGroup() {
-    wd.findElement(By.name("selected[]")).click();
+    click("selected[]");
   }
 }
