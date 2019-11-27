@@ -47,10 +47,15 @@ public class ContactHelper extends HelperBase {
     new Select(wd.findElement(By.name("amonth"))).selectByVisibleText(contactData.getaMonth());
     click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])[1]/following::option[36]"));
     type(By.name("ayear"), contactData.getaYear());
-    click(By.name("theform"));
   }
 
   public void initContactCreation() {
     click(By.linkText("add new"));
+  }
+
+  public void initContactModification() {click(By.xpath("//img[@alt='Edit']"));  }
+
+  public void submitContactModification() {
+    click(By.name("update"));
   }
 }
