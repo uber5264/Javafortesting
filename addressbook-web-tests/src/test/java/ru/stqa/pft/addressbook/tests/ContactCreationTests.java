@@ -12,7 +12,8 @@ public class ContactCreationTests extends TestBase {
     app.getContactHelper().fillContactForm(new ContactData("John", "Johnson", "Jojnson",
             "JJonson", "Mr.", "super Big company",
             "Russia, St Petersburgh", "123-56-67", "john.johnson@rambler.ru",
-            "www.homepage.ru", "1985", "February", "2", "2", "February", "2015"));
+            "www.homepage.ru", "1985", "February", "2", "2", "February",
+            "2015", "test1"), true);
     app.getContactHelper().submitContactCreation();
     app.getContactHelper().returnToHomePage();
     app.logOut();

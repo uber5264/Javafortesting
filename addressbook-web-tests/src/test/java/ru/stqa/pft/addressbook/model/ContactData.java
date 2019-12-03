@@ -17,9 +17,12 @@ public class ContactData {
   private final String aDay;
   private final String aMonth;
   private final String aYear;
+  private String group;
 
 
-  public ContactData(String firstName, String middleName, String lastName, String nickName, String title, String companyName, String address, String mobilePhone, String email, String homePage, String bYear, String bMonth, String bDay, String aDay, String aMonth, String aYear) {
+  public ContactData(String firstName, String middleName, String lastName, String nickName, String title,
+                     String companyName, String address, String mobilePhone, String email, String homePage,
+                     String bYear, String bMonth, String bDay, String aDay, String aMonth, String aYear, String group) {
     this.firstName = firstName;
     this.middleName = middleName;
     this.lastName = lastName;
@@ -36,6 +39,7 @@ public class ContactData {
     this.aDay = aDay;
     this.aMonth = aMonth;
     this.aYear = aYear;
+    this.group = group;
   }
   public String getFirstName() {
     return firstName;
@@ -93,12 +97,12 @@ public class ContactData {
     return aDay;
   }
 
-  public String getaMonth() {
-    return aMonth;
-  }
+  public String getaMonth() {return aMonth; }
 
-  public String getaYear() {
-    return aYear;
+  public String getaYear() {return aYear; }
+
+  public String getGroup() {
+    return group;
   }
 
 }
