@@ -9,7 +9,7 @@ public class GroupDeletionTests extends TestBase {
     app.getNavigationHelper().goToGroupPage();
     app.getGroupHelper().selectGroup();
     app.getGroupHelper().deleteSelectedGroup();
-    app.getGroupHelper().returnToHomePage();
+    app.getNavigationHelper().returnToHomePage();
   }
 
 }
