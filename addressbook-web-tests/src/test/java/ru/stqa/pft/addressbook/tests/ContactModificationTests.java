@@ -14,7 +14,7 @@ public class ContactModificationTests extends TestBase {
               "JJonson", "Mr.", "super Big company",
               "Russia, St Petersburgh", "123-56-67", "john.johnson@rambler.ru",
               "www.homepage.ru", "1985", "February", "2", "2", "February",
-              "2015", "test1"), true);
+              "2015", "[none]"));
      }
     app.getContactHelper().initContactModification();
     app.getContactHelper().fillContactForm(new ContactData("Robert", "Stivenson", "Jojnson",
