@@ -13,9 +13,7 @@ public class HelperBase {
     this.wd = wd;
   }
 
-  public void click(By locator) {
-    wd.findElement(locator).click();
-  }
+  public void click(By locator) {wd.findElement(locator).click(); }
 
   public void type(By locator, String text) {
     click(locator);
