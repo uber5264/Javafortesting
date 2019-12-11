@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.pft.addressbook.tests.GroupCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-10T20:47:34" hostname="WIN-MUA28SHJR55" time="2.745">
+<testsuite name="ru.stqa.pft.addressbook.tests.GroupCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-11T14:37:21" hostname="WIN-MUA28SHJR55" time="6.122">
   <properties/>
-  <testcase name="testGroupCreation" classname="ru.stqa.pft.addressbook.tests.GroupCreationTests" time="2.745"/>
+  <testcase name="testGroupCreation" classname="ru.stqa.pft.addressbook.tests.GroupCreationTests" time="6.122"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[1576010843110	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\1\\AppData\\Local\\Temp\\rust_mozprofile2L5itK"
-1576010846550	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1576010846551	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1576010846551	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1576010846551	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+  <system-err><![CDATA[1576075031746	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\1\\AppData\\Local\\Temp\\rust_mozprofiletazkil"
+1576075033399	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1576075033399	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1576075033399	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1576075033400	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1576010851406	Marionette	INFO	Listening on port 64937
-1576010851895	Marionette	WARN	TLS certificate errors will be ignored for this session
-Dec 10, 2019 3:47:32 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1576075038035	Marionette	INFO	Listening on port 65443
+1576075038182	Marionette	WARN	TLS certificate errors will be ignored for this session
+Dec 11, 2019 9:37:18 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1576010856866	Marionette	INFO	Stopped listening on port 64937
-[Child 3372, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1575281455/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 3372, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1575281455/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 5612, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1575281455/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Parent 5664, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1575281455/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 3920, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1575281455/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 3920, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1575281455/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1576075048024	Marionette	INFO	Stopped listening on port 65443
+[Child 5368, Chrome_ChildThread] WARNING: p[Parent 6076, Gecko_IOThread] WARNING: file z:/task_1575281455/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[Child 5168, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1575281455/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+ipe error: 109: file z:/task_1575281455/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5368, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1575281455/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
 ]]></system-err>
 </testsuite>
