@@ -9,7 +9,7 @@ public class ContactModificationTests extends TestBase {
 
   @Test (enabled = false)
   public void testContactModification() {
-    app.getNavigationHelper().returnToHomePage();
+    app.goTo().returnToHomePage();
     if (! app.getContactHelper().isThereAContact()) {
       app.getContactHelper().createContact(new ContactData("John", "Johnson", "Jojnson",
               "JJonson", "Mr.", "super Big company",
@@ -26,7 +26,7 @@ public class ContactModificationTests extends TestBase {
             "www.homepage.ru", "1985", "February", "2", "2", "February",
             "2015", null), false);
     app.getContactHelper().submitContactModification();
-    app.getNavigationHelper().returnToHomePage();
+    app.goTo().returnToHomePage();
     int after = app.getContactHelper().getContactCount();
     Assert.assertEquals(after, before);
   }
