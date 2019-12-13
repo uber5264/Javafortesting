@@ -11,12 +11,20 @@ public class ContactModificationTests extends TestBase {
   public void testContactModification() {
     app.getNavigationHelper().returnToHomePage();
     if (! app.getContactHelper().isThereAContact()) {
-      app.getContactHelper().createContact(new ContactData("John", "Johnson", "test1"));
+      app.getContactHelper().createContact(new ContactData("John", "Johnson", "Jojnson",
+              "JJonson", "Mr.", "super Big company",
+              "Russia, St Petersburgh", "123-56-67", "john.johnson@rambler.ru",
+              "www.homepage.ru", "1985", "February", "2", "2", "February",
+              "2015", "[none]"));
      }
     int before = app.getContactHelper().getContactCount();
     app.getContactHelper(). selectContact(before - 1);
     app.getContactHelper().initContactModification();
-    app.getContactHelper().fillContactForm(new ContactData("Robert", "Stivenson", null), false);
+    app.getContactHelper().fillContactForm(new ContactData("Robert", "Stivenson", "Jojnson",
+            "JJonson", "Mr.", "super Big company",
+            "Russia, St Petersburgh", "123-56-67", "john.johnson@rambler.ru",
+            "www.homepage.ru", "1985", "February", "2", "2", "February",
+            "2015", null), false);
     app.getContactHelper().submitContactModification();
     app.getNavigationHelper().returnToHomePage();
     int after = app.getContactHelper().getContactCount();
