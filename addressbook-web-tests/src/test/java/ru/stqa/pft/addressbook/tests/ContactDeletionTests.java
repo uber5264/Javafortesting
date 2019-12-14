@@ -8,19 +8,19 @@ public class ContactDeletionTests extends TestBase {
 
   @Test (enabled = false)
   public void testContactDeletion() throws Exception {
-    app.goTo().returnToHomePage();
+    app.getNavigationHelper().returnToHomePage();
     if (! app.getContactHelper().isThereAContact()) {
       app.getContactHelper().createContact(new ContactData("John", "Johnson", "Jojnson",
               "JJonson", "Mr.", "super Big company",
               "Russia, St Petersburgh", "123-56-67", "john.johnson@rambler.ru",
               "www.homepage.ru", "1985", "February", "2", "2", "February",
               "2015", "[none]"));
-      app.goTo().returnToHomePage();
+      app.getNavigationHelper().returnToHomePage();
     }
     int before = app.getContactHelper().getContactCount();
     app.getContactHelper().selectContact(before - 1);
     app.getContactHelper().deleteSelectedContact();
-    app.goTo().returnToHomePage();
+    app.getNavigationHelper().returnToHomePage();
     int after = app.getContactHelper().getContactCount();
     Assert.assertEquals(after, before - 1);
   }

@@ -18,7 +18,7 @@ public class ContactCreationTests extends TestBase {
             "www.homepage.ru", "1985", "February", "2", "2", "February",
             "2015", "test1"), true);
     app.getContactHelper().submitContactCreation();
-    app.goTo().returnToHomePage();
+    app.getNavigationHelper().returnToHomePage();
     int after = app.getContactHelper().getContactCount();
     Assert.assertEquals(after, before +1);
 
