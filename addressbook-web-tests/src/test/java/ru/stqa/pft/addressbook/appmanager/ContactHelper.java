@@ -19,30 +19,7 @@ public class ContactHelper extends HelperBase {
 
   public void fillContactForm(ContactData contactData, boolean creation) {
     type(By.name("firstname"), contactData.getFirstName());
-    type(By.name("middlename"), contactData.getMiddleName());
     type(By.name("lastname"),contactData.getLastName());
-    type(By.name("nickname"),contactData.getNickName());
-    type(By.name("title"), contactData.getTitle());
-    type(By.name("company"), contactData.getCompanyName());
-    type(By.name("address"), contactData.getAddress());
-    type(By.name("mobile"), contactData.getMobilePhone());
-    type(By.name("email"), contactData.getEmail());
-    type(By.name("homepage"), contactData.getHomePage());
-    click(By.name("bday"));
-    new Select(wd.findElement(By.name("bday"))).selectByVisibleText(contactData.getbDay());
-    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::option[4]"));
-    click(By.name("bmonth"));
-    new Select(wd.findElement(By.name("bmonth"))).selectByVisibleText(contactData.getbMonth());
-    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::option[36]"));
-    type(By.name("byear"), contactData.getbYear());
-    click(By.name("aday"));
-    new Select(wd.findElement(By.name("aday"))).selectByVisibleText(contactData.getaDay());
-    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])[1]/following::option[4]"));
-    click(By.name("amonth"));
-    new Select(wd.findElement(By.name("amonth"))).selectByVisibleText(contactData.getaMonth());
-    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])[1]/following::option[36]"));
-    type(By.name("ayear"), contactData.getaYear());
-
     if (creation) {
       click(By.name("new_group"));
       new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
@@ -80,29 +57,7 @@ public class ContactHelper extends HelperBase {
 
   public void fillContactForm2(ContactData contactData) {
     type(By.name("firstname"), contactData.getFirstName());
-    type(By.name("middlename"), contactData.getMiddleName());
     type(By.name("lastname"),contactData.getLastName());
-    type(By.name("nickname"),contactData.getNickName());
-    type(By.name("title"), contactData.getTitle());
-    type(By.name("company"), contactData.getCompanyName());
-    type(By.name("address"), contactData.getAddress());
-    type(By.name("mobile"), contactData.getMobilePhone());
-    type(By.name("email"), contactData.getEmail());
-    type(By.name("homepage"), contactData.getHomePage());
-    click(By.name("bday"));
-    new Select(wd.findElement(By.name("bday"))).selectByVisibleText(contactData.getbDay());
-    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::option[4]"));
-    click(By.name("bmonth"));
-    new Select(wd.findElement(By.name("bmonth"))).selectByVisibleText(contactData.getbMonth());
-    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::option[36]"));
-    type(By.name("byear"), contactData.getbYear());
-    click(By.name("aday"));
-    new Select(wd.findElement(By.name("aday"))).selectByVisibleText(contactData.getaDay());
-    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])[1]/following::option[4]"));
-    click(By.name("amonth"));
-    new Select(wd.findElement(By.name("amonth"))).selectByVisibleText(contactData.getaMonth());
-    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])[1]/following::option[36]"));
-    type(By.name("ayear"), contactData.getaYear());
     click(By.name("new_group"));
     new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
     click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Group:'])[1]/following::option[1]"));
