@@ -123,7 +123,7 @@ public class ContactHelper extends HelperBase {
     return contacts;
   }
 
-  public Contacts contactCache = null;
+  private Contacts contactCache = null;
 
   public Contacts all() {
     if (contactCache !=null) {
@@ -135,8 +135,10 @@ public class ContactHelper extends HelperBase {
       List<WebElement> cells = element.findElements(By.tagName("td"));
       String lName = cells.get(1).getText();
       String fName = cells.get(2).getText();
+      String[] phones = cells.get(5).getText().split("\n");
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      contactCache.add(new ContactData().withId(id).withFirstName(fName).withLastName(lName));
+      contactCache.add(new ContactData().withId(id).withFirstName(fName).withLastName(lName)
+              .withHomePhone(phones[0]).withMobilePhone(phones[1]).withWorkPhone(phones[2]));
     }
     return new Contacts(contactCache);
   }
@@ -154,7 +156,7 @@ public class ContactHelper extends HelperBase {
   }
 
   private void initContactModificationById(int id) {
-    WebElement checkbox = wd.findElement(By.cssSelector(String.format("input[value='%s']", id));
+    WebElement checkbox = wd.findElement(By.cssSelector(String.format("input[value='%s']", id)));
     WebElement row = checkbox.findElement(By.xpath("./../.."));
     List<WebElement> cells = row.findElements(By.tagName("td"));
     cells.get(7).findElement(By.tagName("a")).click();
