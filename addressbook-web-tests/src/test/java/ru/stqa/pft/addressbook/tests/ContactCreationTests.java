@@ -8,7 +8,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ContactCreationTests extends TestBase {
 
-//(enabled = false)
+
   @Test
   public void testContactCreation() throws Exception {
     Contacts before = app.contact().all();
@@ -19,7 +19,7 @@ public class ContactCreationTests extends TestBase {
     assertThat(after.size(), equalTo(before.size() + 1));
 
     assertThat(after, equalTo(
-            before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
+          before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
 
   }
   
