@@ -128,7 +128,11 @@ public class ContactHelper extends HelperBase {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   private Contacts contactCache = null;
+=======
+  public Contacts contactCashe = null;
+>>>>>>> parent of ba5273b... lesson 5.9
 =======
   public Contacts contactCashe = null;
 >>>>>>> parent of ba5273b... lesson 5.9
@@ -150,8 +154,12 @@ public class ContactHelper extends HelperBase {
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       contactCache.add(new ContactData().withId(id).withFirstName(fName).withLastName(lName)
               .withHomePhone(phones[0]).withMobilePhone(phones[1]).withWorkPhone(phones[2]));
+=======
+      contactCashe.add(new ContactData().withId(id).withFirstName(fName).withLastName(lName));
+>>>>>>> parent of ba5273b... lesson 5.9
 =======
       contactCashe.add(new ContactData().withId(id).withFirstName(fName).withLastName(lName));
 >>>>>>> parent of ba5273b... lesson 5.9
@@ -164,12 +172,15 @@ public class ContactHelper extends HelperBase {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   private void initContactModificationById(int id) {
     WebElement checkbox = wd.findElement(By.cssSelector(String.format("input[value='%s']", id)));
     WebElement row = checkbox.findElement(By.xpath("./../.."));
     List<WebElement> cells = row.findElements(By.tagName("td"));
     cells.get(7).findElement(By.tagName("a")).click();
   }
+=======
+>>>>>>> parent of ba5273b... lesson 5.9
 =======
 >>>>>>> parent of ba5273b... lesson 5.9
 =======
