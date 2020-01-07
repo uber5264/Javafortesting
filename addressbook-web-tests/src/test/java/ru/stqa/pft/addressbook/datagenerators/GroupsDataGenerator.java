@@ -1,4 +1,4 @@
-package ru.stqa.pft.addressbook.generators;
+package ru.stqa.pft.addressbook.datagenerators;
 
 import ru.stqa.pft.addressbook.model.GroupData;
 import java.io.File;
@@ -8,13 +8,13 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GroupDataGenerator {
+public class GroupsDataGenerator {
 
   public static void main(String[] args) throws IOException {
     int count = Integer.parseInt(args[0]);
     File file = new File(args[1]);
 
-    List<GroupData> groups= generateGroups(count);
+    List<GroupData> groups = generateGroups(count);
     save(groups, file);
 
   }
