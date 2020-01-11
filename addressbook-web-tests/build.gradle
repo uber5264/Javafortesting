@@ -9,6 +9,8 @@ dependencies {
     implementation 'org.seleniumhq.selenium:selenium-java:4.0.0-alpha-3'
     implementation 'org.hamcrest:hamcrest:2.2'
     implementation 'com.beust:jcommander:1.78'
+    implementation 'org.webjars.npm:xstream:5.1.4'
+    implementation 'com.thoughtworks.xstream:xstream:1.4.11.1'
 }
 
 test{

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.webjars.npm:xstream:5.1.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.webjars.npm/xstream/5.1.4/c2f57ce774663a3802b5997324b86cf43ff6644/xstream-5.1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.webjars.npm/xstream/5.1.4/b04f3ee8f5e43fa3b162981b50bb72fe1acabb33/xstream-5.1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
