@@ -64,10 +64,10 @@ public class ContactHelper extends HelperBase {
   public void fillContactForm2(ContactData contactData) {
     type(By.name("firstname"), contactData.getFirstName());
     type(By.name("lastname"),contactData.getLastName());
-    attach(By.name("photo"),contactData.getPhoto());
-    click(By.name("new_group"));
-    new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
-    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Group:'])[1]/following::option[1]"));
+    //attach(By.name("photo"),contactData.getPhoto());
+    //click(By.name("new_group"));
+    //new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+   // click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Group:'])[1]/following::option[1]"));
   }
 
   public void create(ContactData contact) {
