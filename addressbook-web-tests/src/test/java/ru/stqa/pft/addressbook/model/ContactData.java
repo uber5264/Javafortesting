@@ -3,35 +3,68 @@ package ru.stqa.pft.addressbook.model;
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import org.hibernate.annotations.Type;
+
+import javax.persistence.*;
 import java.io.File;
 import java.util.Objects;
 
 // @XStreamAlias("contact")
+@Entity
+@Table(name = "addressbook")
 public class ContactData {
   @XStreamOmitField
+  @Id
+  @Column(name = "id")
   private int id = Integer.MAX_VALUE;
-  private String group;
+
+  @Column(name = "home")
+  @Type(type = "text")
   private String homePhone;
+
+  @Column(name = "mobile")
+  @Type(type = "text")
   private String mobilePhone;
+
+  @Column(name = "work")
+  @Type(type = "text")
   private String workPhone;
-  private String allPhones;
-  private String email;
-  private String email2;
-  private String email3;
-  private String allEmails;
-  private String allAddress;
-  private String address;
-  private String address2;
-  private File photo;
+
+  @Column(name = "photo")
+  @Type(type = "text")
+  private String photo;
 
   @Expose
+  @Column(name = "firstname")
   private String firstName;
   @Expose
+  @Column(name = "lastname")
   private String lastName;
 
 
+  @Transient
+  private String group;
+  @Transient
+  private String allPhones;
+  @Transient
+  private String email;
+  @Transient
+  private String email2;
+  @Transient
+  private String email3;
+  @Transient
+  private String allEmails;
+  @Transient
+  private String allAddress;
+  @Transient
+  private String address;
+  @Transient
+  private String address2;
+
+
+
   public ContactData withPhoto(File photo) {
-    this.photo = photo;
+    this.photo = photo.getPath();
     return this;
   }
 
@@ -89,7 +122,7 @@ public class ContactData {
     return  this;
   }
 
-  public File getPhoto() {return photo;  }
+  public File getPhoto() {return new File (photo);  }
   public String getMobilePhone() { return mobilePhone; }
   public String getHomePhone() { return homePhone; }
   public String getAllPhones() { return allPhones;  }
