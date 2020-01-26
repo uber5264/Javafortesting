@@ -10,7 +10,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.client.LaxRedirectStrategy;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +33,7 @@ public class HttpSession {
     post.setEntity(new UrlEncodedFormEntity(params));
     CloseableHttpResponse response = httpclient.execute(post);
     String body = geTextFrom(response);
-    return body.contains(String.format("<span class=\"italic\">%s</span", username));
+    return body.contains(String.format("<span class=\"italic\">%s</span>", username));
   }
 
   private String geTextFrom(CloseableHttpResponse response) throws IOException {
@@ -45,10 +44,10 @@ public class HttpSession {
     }
   }
   public boolean isLoggedInAs(String username) throws IOException {
-    HttpGet get = new HttpGet(app.getProperty("web.baseUrl") + "/login.php");
+    HttpGet get = new HttpGet(app.getProperty("web.baseUrl") + "/index.php");
     CloseableHttpResponse response = httpclient.execute(get);
     String body = geTextFrom(response);
-    return body.contains(String.format("<span class=\"italic\">%s</span", username));
+    return body.contains(String.format("<span class=\"italic\">%s</span>", username));
   }
 
 }
